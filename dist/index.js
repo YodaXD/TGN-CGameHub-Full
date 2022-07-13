@@ -16,7 +16,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000 || $PORT;
 if (!fs_1.default.existsSync('./scripts.json')) {
     fs_1.default.writeFileSync('./scripts.json', '[]');
 }
