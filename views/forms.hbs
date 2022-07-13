@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TGN X</title>
+   <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/841698483898810400/897185981260779540/bgicon.png" type="image/x-icon">
+</head>
+<body>
+    <main class="main">
+        <div class="panel">
+        <header class="header">
+        </header>
+        <form action="/index" method="post">
+        <section class="main-secction">
+            <div class="section-title section-box">
+                <input required name="name" placeholder="Inserta tu Nick" class="input-text" type="text" name="name" id="name">
+              </div>
+            <div class="section-title section-box">
+              <input required name="title" placeholder="Inserta el Titulo" class="input-text" type="text" name="title" id="title">
+            </div>
+            <div class="section-script section-box">
+                <input   required name="script" placeholder="Inserta el Script" class="input-text script" type="text" name="script" id="script">
+            </div>
+            <div class="section-description section-box">
+                <input  required name="description" placeholder="Inserta una Descripción" class="input-text description" type="text" name="description" id="description">
+            </div>
+            <div class="section-image section-box">
+                <input  required    requiredname="image"placeholder="Inserta la URL de la imagen" class="input-text image" type="text" name="image" id="image">
+            </div>
+
+        </section>
+        <footer class="panel-footer">
+          <button class="panel-footer-button">Send Script</button>
+          <p id="correct-text" class="panel-footer-text">Script enviado correctamente</p>
+        </footer>
+    </form>
+    </div>
+    </main>
+</body>
+<style>
+    
+body{
+    background-color: rgb(50, 50, 50);
+    font-family: sans-serif;
+    background-image: url('https://cdn.discordapp.com/attachments/890324951670853688/996819735029239808/unknown.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.panel{
+    background-color: rgb(30, 30, 30);
+    border-radius: 15px;
+    overflow: hidden;
+    min-height: 450px;
+    min-width: 350px;
+    box-shadow: 0px 0.1px 1px rgba(0, 0, 0, 0.11);
+}
+.header{
+    min-width: 100%;
+    min-height: 150px;
+    display: block;
+    background-image: url(https://cdn.discordapp.com/attachments/841698483898810400/897185981260779540/bgicon.png);
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#header-image{
+    width: 100%;
+    display: block;
+}
+.main-secction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-box{
+    margin-top: 20px;
+   
+    
+}
+.input-text{
+    background-color: transparent;
+    border: 1px solid #5b5b5c88;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    min-width: 250px;
+    min-height: 20px;
+    
+}
+.input-text::placeholder{
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.63);
+}
+.panel-footer{
+    margin-top: 30px;
+}
+.panel-footer-button{
+  margin-top: 0px;
+    margin-left: 50px;
+    width: 260px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    background-color: rgba(227,1,221,0.3);
+    font-family: sans-serif;
+}
+.panel-footer-button:active{
+    background-color: rgba(227, 1, 219, 0.452);
+}
+.panel-footer-text{
+    justify-content: center;
+    align-items: center;
+    margin-left: 22%;
+    color: rgb(54, 139, 46);
+    display: none;
+    
+}
+</style>
+</html>
