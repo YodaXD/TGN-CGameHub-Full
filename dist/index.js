@@ -13,10 +13,11 @@ const mysql = require('mysql');
 const { MessageEmbed,MessageActionRow,MessageButton,Client, Intents, Message } = require('discord.js');
 const { json } = require('express');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const newscript  = require('../controllers/newscripts.controllers');
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 80;
 if (!fs_1.default.existsSync('./scripts.json')) {
     fs_1.default.writeFileSync('./scripts.json', '[]');
 }
@@ -240,7 +241,7 @@ app.post('/index',function (req, res, next){
                             headers: {'Content-Type': 'application/json'},
                             body: {
                                 image: image,
-                                name: name,
+                                name: title,
                                 description: description,
                                 author: name,
                                 script: script
@@ -249,6 +250,7 @@ app.post('/index',function (req, res, next){
                         };
                         m.delete();
                         const user = b.user.tag;
+                        newscript.newscriptsend(title,name,image,description,script);
                         client.channels.cache.get('934915766787133460')?.send('Script _**'+title+'**_ aceptado por _'+user+'_ :white_check_mark:').catch(console.error);
                         request(options, function (error, response, body) {
                             if (error) throw new Error(error);
